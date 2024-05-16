@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.sass";
+import Nav from "./components/Nav";
+import Create1 from "./opgaver/Create1/Create1";
+import Modify1 from "./opgaver/Modify1/Modify1";
+import Use1 from "./opgaver/Use1/Use1";
+import Use2 from "./opgaver/Use2/Use2";
 
 function App() {
+  const assignments = ["use-1", "use-2", "modify-1", "create-1"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav list={assignments} />
+      <main>
+        <Use1 />
+        <Use2 />
+        <Modify1 />
+        <Create1 />
+      </main>
+    </>
   );
 }
 

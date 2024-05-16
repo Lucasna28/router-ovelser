@@ -1,0 +1,11 @@
+@mixin flex($gap: 0rem, $dir: column, $just: center, $align: center)
+    display: flex
+    flex-direction: $dir
+    align-items: $align
+    justify-content: $just
+    gap: $gap
+
+@mixin img()
+    object-fit: cover
+    @include flex()
+    
